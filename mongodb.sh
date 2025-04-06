@@ -27,7 +27,7 @@ else
     echo -e " $2 $G Installed $N properly"
 fi
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>> LOGFILE
+cp  path to mongorepo mongo.repo /etc/yum.repos.d/mongo.repo &>> LOGFILE
 
 VALIDATE $? "Copied MongoDB Repo"
 
@@ -35,23 +35,23 @@ dnf install mongodb-org -y  &>> LOGFILE
 
 VALIDATE $? "Installed Mongodb"
 
-systemctl enable mongod 
+systemctl enable mongod  &>> LOGFILE
 
 VALIDATE $? "Enabled mongodb"
 
-systemctl start mongod 
+systemctl start mongod  &>> LOGFILE
 
 VALIDATE $? "started mongodb"
 
-cp /etc/mongod.conf /etc/mongod.conf.bak
+cp /etc/mongod.conf /etc/mongod.conf.bak  &>> LOGFILE
 
 VALIDATE $? "Copied backup"
 
-sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf 
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf  &>> LOGFILE
 
 VALIDATE $? "changed listener adress"
 
-systemctl restart mongod
+systemctl restart mongod  &>> LOGFILE
 
 VALIDATE $? "Restarted mongodb"
 
