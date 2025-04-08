@@ -47,7 +47,7 @@ mvn clean package  &>> LOGFILE
 
 mv target/shipping-1.0.jar shipping.jar  &>> LOGFILE
 
-cp path to shipping.service /etc/systemd/system/shipping.service  &>> LOGFILE
+cp /home/ec2-user/roboshopshell/shipping.service /etc/systemd/system/shipping.service  &>> LOGFILE
 
 Validate $? "copied shipping service file"
 

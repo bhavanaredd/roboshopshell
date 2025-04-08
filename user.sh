@@ -55,7 +55,7 @@ unzip /tmp/user.zip
 
 npm install &>> LOGFILE
 
-cp  path to user.service /etc/systemd/system/user.service
+cp /home/ec2-user/roboshopshell/user.service /etc/systemd/system/user.service
 
 Validate $? "user service is added"
 

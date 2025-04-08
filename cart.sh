@@ -55,7 +55,7 @@ unzip /tmp/cart.zip &>> LOGFILE
 
 npm install &>> LOGFILE
 
-cp  path to cart.service /etc/systemd/system/cart.service
+cp /home/ec2-user/roboshopshell/cart.service /etc/systemd/system/cart.service
 
 Validate $? "cart service is added"
 

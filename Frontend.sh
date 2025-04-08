@@ -37,7 +37,7 @@ unzip /tmp/frontend.zip
 
  touch /etc/nginx/nginx.conf &>> LOGFILE
 
- cp path to nginx conf /etc/nginx/nginx.conf &>> LOGFILE
+ cp /home/ec2-user/roboshopshell/nginx.conf /etc/nginx/nginx.conf &>> LOGFILE
 
  systemctl restart nginx &>> LOGFILE
 

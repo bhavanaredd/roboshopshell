@@ -54,7 +54,7 @@ unzip /tmp/catalogue.zip
 
 npm install &>> LOGFILE
 
-cp  path to catalogue.service /etc/systemd/system/catalogue.service
+cp  /home/ec2-user/roboshopshell/catalogue.service /etc/systemd/system/catalogue.service
 
 Validate $? "Catalogue service is added"
 
@@ -66,7 +66,7 @@ systemctl start catalogue &>> LOGFILE
 
 Validate $? "Catalogue started"
 
-cp mongodbclient.repo /etc/yum.repos.d/mongo.repo &>> LOGFILE
+cp /home/ec2-user/roboshopshell/mongodbclient.repo /etc/yum.repos.d/mongo.repo &>> LOGFILE
 
 Validate $? "Copied..."
 

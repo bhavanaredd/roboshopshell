@@ -29,7 +29,7 @@ fi
 
 }
 
-cp  path to mongorepo mongo.repo /etc/yum.repos.d/mongo.repo &>> LOGFILE
+cp  /home/ec2-user/roboshopshell/mongo.repo /etc/yum.repos.d/mongo.repo &>> LOGFILE
 
 VALIDATE $? "Copied MongoDB Repo"
 

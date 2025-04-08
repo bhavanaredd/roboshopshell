@@ -29,7 +29,7 @@ fi
 
 }
 
-cp path to rabbitmq repo /etc/yum.repos.d/rabbitmq.repo &>> LOGFILE
+cp /home/ec2-user/roboshopshell/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>> LOGFILE
 
 Validate "$?" "Copied repo"
 

@@ -42,7 +42,7 @@ unzip /tmp/payment.zip
 cd /app 
 pip3 install -r requirements.txt &>> LOGFILE
 
-cp path to payment.service /etc/systemd/system/payment.service &>> LOGFILE
+cp /home/ec2-user/roboshopshell/payment.service /etc/systemd/system/payment.service &>> LOGFILE
 
 systemctl daemon-reload
 
