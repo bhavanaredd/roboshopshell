@@ -22,11 +22,12 @@ Validate(){
 
     if [$1 -ne 0]
 then
-    echo -e " $2  $R Not installed $N properly"
+    echo -e " $2  $R FAILED $N"
 else 
-    echo -e " $2 $G Installed $N properly"
+    echo -e " $2 $G SUCCESS $N "
 fi
 
+}
 dnf module disable nodejs -y  &>> LOGFILE
 
 Validate $? "Disabled Nodejs"
