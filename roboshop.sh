@@ -23,7 +23,8 @@ aws ec2 authorize-security-group-egress --region $REGION --group-id $SECURITY_GR
 # Output the security group ID
 echo "Security group '$SECURITY_GROUP_NAME' created with ID: $SECURITY_GROUP_ID"
 
-Instances= ("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "cart" "user" "shipping" "payment" "dispatch" "web")
+Instances=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "cart" "user" "shipping" "payment" "dispatch" "web")
+
 
 for Instances in ${array[@]}"
 do
