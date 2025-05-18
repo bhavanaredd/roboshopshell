@@ -21,11 +21,11 @@ aws ec2 authorize-security-group-ingress --region $REGION --group-id $SECURITY_G
 # Output the security group ID
 echo "Security group '$SECURITY_GROUP_NAME' created with ID: $SECURITY_GROUP_ID"
 
-Instances=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "cart" "user" "shipping" "payment" "dispatch" "web")
+Instances=("mongodb" "catalogue" "web")
 
 for instance in "${Instances[@]}"
 do
-  if [[ "$instance" == "mongodb" || "$instance" == "shipping" || "$instance" == "payment" ]]; then
+  if [[ "$instance" == "mongodb"]]; then
     instancetype=$SIZE2
   else
     instancetype=$SIZE1
